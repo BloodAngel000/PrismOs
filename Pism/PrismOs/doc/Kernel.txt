@@ -1,0 +1,51 @@
+1. Inspection du noyau (Savoir ce qui tourne)
+
+Ces commandes permettent de savoir quelle version du noyau est active et comment le système matériel est perçu.
+
+    uname -r : Affiche uniquement la version exacte du noyau en cours d'exécution (ex: 6.8.x-arch...).
+
+    uname -a : Affiche des informations complètes (architecture, nom d'hôte, version précise du noyau, date de compilation).
+
+    hostnamectl : Donne une vue d'ensemble propre, incluant la version du noyau et l'architecture CPU.
+
+    cat /proc/version : Lit directement le fichier virtuel du noyau pour afficher sa version et le compilateur utilisé (souvent GCC ou Clang).
+
+2. Gestion des modules et des pilotes (lsmod, modprobe)
+
+Le noyau Linux est modulaire : il charge ou décharge des morceaux de code (pilotes de cartes graphiques, Wi-Fi, systèmes de fichiers) à la volée sans avoir à tout recompiler.
+
+    lsmod : Liste tous les modules actuellement chargés en mémoire.
+
+    modinfo <nom_du_module> : Affiche les métadonnées d'un module (auteur, description, paramètres modifiables).
+
+    modprobe <nom> : Charge un module en mémoire en gérant automatiquement ses dépendances.
+
+    modprobe -r <nom> : Décharge proprement un module du noyau.
+
+    insmod <chemin/vers/module.ko> : Charge un module brut directement à partir d'un fichier (sans chercher les dépendances). Réservé aux cas de debug avancés.
+
+    rmmod <nom> : Retire un module de force de la mémoire (si aucun autre processus ne l'utilise).
+
+3. Configuration en temps réel (sysctl et le système de fichiers /proc / /sys)
+
+Le noyau expose son état interne à travers deux systèmes de fichiers virtuels (/proc et /sys) que l'on peut lire et modifier à chaud.
+
+    sysctl -a : Liste tous les paramètres modifiables du noyau en temps réel (réseau, mémoire, sécurité).
+
+    sysctl -p : Applique immédiatement les modifications inscrites dans le fichier de configuration /etc/sysctl.conf.
+
+    sysctl <parametre>=<valeur> : Modifie un paramètre du noyau à la volée (ex: sysctl vm.swappiness=10).
+
+    cat /proc/... : Permet de lire des infos instantanées (ex: cat /proc/cpuinfo pour les infos processeur, cat /proc/meminfo pour la RAM).
+
+    cat /sys/... ou écriture directe dedans : Pour configurer des aspects bas niveau du matériel (luminosité, gestion d'énergie).
+
+4. Diagnostics et journaux (dmesg, journalctl)
+
+Quand le noyau réagit, plante, ou détecte un périphérique, il hurle dans ses tampons de logs.
+
+    dmesg : Affiche le tampon de messages du noyau depuis le démarrage (essentiel pour voir si un driver a planté ou si une clé USB est reconnue).
+
+    dmesg -w : Suit les messages du noyau en direct (mode "follow"), très pratique pour brancher du matériel et voir la réaction immédiate du kernel.
+
+    journalctl -k : Interroge systemd-journald pour n'afficher que les logs provenant exclusivement du noyau.

@@ -1,0 +1,43 @@
+In the prism kernel we use the neuromorphism link
+An neuronal liaison for something, and it can created a module
+and the Kernel has a Hierarchy and has 9 ranks
+
+These ranks is also a class of act in the Kernel
+
+Highest orders -> close to the hardware
+
+    Seraphim
+    Cherubim (chayot)
+    Thrones (ophanim, erelim)
+
+Middle orders
+
+    Dominions (hashmallim)
+    Virtues (malakim, tarshishim)
+    Powers
+
+Lowest orders -> close to the software
+
+    Principalities
+    Archangels
+    Angels
+
+
+
+[ LE PROCESSEUR / HARDWARE ]
+                ▲
+     1. Séraphins   (Gestion directe des registres, interruptions, cycles CPU)
+     2. Chérubins   (Sagesse / Calculs matriciels intensifs & Mémoire)
+     3. Trônes      (Stabilité / Gestion des bus de données & I/O hardware)
+                │
+     4. Dominations (Ordonnancement, arbitrages des ressources)
+     5. Vertus      (Exécution des décisions, allocations dynamiques sans heap)
+     6. Puissances  (Sécurité, isolation, détection d'anomalies)
+                │
+     7. Principautés(Logique métier, services système)
+     8. Archanges   (Traduction des signaux lourds vers le logiciel)
+     9. Anges       (Interface logicielle, entrées/sorties utilisateur)
+                ▼
+     [ LE SOFTWARE / UTILISATEUR ]
+
+

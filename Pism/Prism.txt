@@ -1,0 +1,77 @@
+Charte
+
+palette de couleur :
+
+    Theme global:
+
+    #69016b
+    #cf78de
+
+    Police: (preference)
+
+    #0c000e
+
+
+    Teinte :
+
+        Light : #b7b5bb
+        Dark :#0c000e
+
+
+police :
+
+    Principale :
+
+        Minicomputer (chiffre, mot)
+
+Regle de mis en page : (pour toute type de document de presentation)
+
+    main theme (type of design : neuromorphism / Flat[minimalism])
+
+    Theme light : (presentation / web / logiciel / OS)
+
+        Style de presentation : ecran a ancre classic
+
+        Couleur de police : #0c000e
+        Couleur pour le fond : #b7b5bb
+
+        Format de la page : (presentation / web)
+
+            interligne : 5 px
+            Gap : 10 px (limite entre les text et les bordures)
+
+            fenetrage :
+
+                is_borded = true
+                epaisseur de bordure : 2px
+                couleur de bodrure :  #0c000e
+                bordure arrondi : 25 px
+
+    Theme dark : (presentation / web / logiciel / OS)
+
+        Style de presentation : ecran a ancre classic
+
+        Couleur de police : #b7b5bb
+        Couleur pour le fond : #0c000e
+
+        Format de la page : (presentation / web)
+
+            interligne : 5 px
+            Gap : 10 px (limite entre les text et les bordures)
+
+            fenetrage :
+
+                is_borded = true
+                epaisseur de bordure : 2px
+                couleur de bodrure :  #0c000e
+                bordure arrondi : 25 px
+
+
+Icon :
+
+    Couleur :
+
+        Light : #b7b5bb
+        Dark :#0c000e
+
+        icon-type : flat - minimaliste
